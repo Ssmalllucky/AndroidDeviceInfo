@@ -208,5 +208,27 @@ public final class DeviceInfoUtils {
                 Environment.MEDIA_MOUNTED);
     }
 
-
+    public static String getDeviceInfo(Context context) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("deviceWidth: ").append(getDeviceWidth(context)).append("\n")
+                .append("deviceHeight: ").append(getDeviceHeight(context)).append("\n")
+                .append("deviceManufacturer: ").append(getDeviceManufacturer()).append("\n")
+                .append("deviceProduct: ").append(getDeviceProduct()).append("\n")
+                .append("deviceBrand: ").append(getDeviceBrand()).append("\n")
+                .append("deviceModel: ").append(getDeviceModel()).append("\n")
+                .append("deviceBoard").append(getDeviceBoard()).append("\n")
+                .append("deviceName").append(getDeviceName()).append("\n")
+                .append("deviceFingerprint: ").append(getDeviceFingerprint()).append("\n")
+                .append("deviceHardware: ").append(getDeviceHardware()).append("\n")
+                .append("deviceHost: ").append(getDeviceHost()).append("\n")
+                .append("deviceDisplay: ").append(getDeviceDisplay()).append("\n")
+                .append("deviceId: ").append(getDeviceId()).append("\n")
+                .append("deviceUser: ").append(getDeviceUser()).append("\n")
+                .append("deviceSerial: ").append(getDeviceSerial()).append("\n")
+                .append("deviceSDK: ").append(getDeviceSDK()).append("\n")
+                .append("deviceAndroidVersion: ").append(getDeviceAndroidVersion()).append("\n")
+                .append("deviceDefaultLanguage: ").append(getDeviceDefaultLanguage()).append("\n")
+                .append("isSDCardMount: ").append(isSDCardMount());
+        return stringBuilder.toString();
+    }
 }
